@@ -1,7 +1,7 @@
 # Ncounter_normalization
 
 ```r
-setwd("C:/1Philekorea/Nanostring/nCounter/WorldKimchi Research Institute/48 RCC file")
+setwd("C:/Nanostring/nCounter/folder/48 RCC file")
 
 ############## Required R packages ############
 library(ggplot2)
@@ -18,7 +18,7 @@ library()
 install.packages("rlang")
 install.packages("NanoStringNorm", force = TRUE)
 install.packages("gdata")
-install.packages("C:/1Philekorea/Nanostring/nCounter/WorldKimchi Research Institute/NanoStringNorm", repos = NULL, type = "source")
+install.packages("C:Nanostring/nCounter/NanoStringNorm", repos = NULL, type = "source")
 install.packages("data.table")
 remove.packages("vctrs")
 remove.packages("remotes")
@@ -40,7 +40,7 @@ dim(Nano_ExpressionMatrix) # 614 165
 # all Endogenous genes (600) and Nanostring negative and positive spike-in controls (14)
 
 #***** Reading sample and clinical information
-Nano_SampleInfo <- read.delim('WorldKimchisampleinform.txt',
+Nano_SampleInfo <- read.delim('sampleinform.txt',
                               stringsAsFactors = FALSE, header = TRUE, as.is = TRUE)
 dim(Nano_SampleInfo) # 48 7
 table(Nano_SampleInfo$Tissues)
